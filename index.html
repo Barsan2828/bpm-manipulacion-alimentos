@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Certificación Manipulación de Alimentos | BPM Management</title>
+<title>Certificación Manipulación de Alimentos</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -14,99 +14,39 @@
 
 body{
 font-family:Poppins;
+background:#f5f7fb;
 margin:0;
-background:#f4f6fa;
-color:#333;
-}
-
-header{
-background:#0c3c60;
-color:white;
-text-align:center;
-padding:40px;
-}
-
-header img{
-width:120px;
 }
 
 .container{
-max-width:1100px;
+max-width:900px;
 margin:auto;
 padding:30px;
 }
 
-.hero{
-text-align:center;
-}
-
-.hero h1{
-font-size:38px;
-}
-
-.info{
-background:white;
-padding:25px;
-border-radius:10px;
-margin-top:30px;
-box-shadow:0 4px 12px rgba(0,0,0,0.1);
-}
-
-.video{
-margin-top:40px;
-text-align:center;
-}
-
-iframe{
-width:100%;
-height:500px;
-border-radius:10px;
-}
-
-.testimonios{
-margin-top:50px;
-text-align:center;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-margin-top:30px;
-}
-
 .card{
-background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 4px 12px rgba(0,0,0,0.1);
-}
-
-.card img{
-width:70px;
-height:70px;
-border-radius:50%;
-}
-
-.quiz{
-margin-top:50px;
 background:white;
 padding:30px;
 border-radius:10px;
-box-shadow:0 4px 12px rgba(0,0,0,0.1);
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+margin-bottom:30px;
 }
 
-.question{
-margin-bottom:20px;
+input{
+width:100%;
+padding:12px;
+margin-top:10px;
+margin-bottom:15px;
+border:1px solid #ddd;
+border-radius:6px;
 }
 
 button{
 background:#0c3c60;
 color:white;
-padding:15px 30px;
 border:none;
+padding:15px 30px;
 border-radius:6px;
-font-size:16px;
 cursor:pointer;
 }
 
@@ -114,43 +54,13 @@ button:hover{
 background:#072c47;
 }
 
-.resultado{
-margin-top:20px;
-font-size:20px;
-font-weight:600;
+.video iframe{
+width:100%;
+height:450px;
 }
 
-.nequi{
+#pago{
 display:none;
-margin-top:30px;
-background:#e8f7ee;
-padding:20px;
-border-radius:10px;
-}
-
-.whatsapp{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
-color:white;
-border-radius:50%;
-width:60px;
-height:60px;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:30px;
-text-decoration:none;
-box-shadow:0 0 10px rgba(0,0,0,0.3);
-}
-
-footer{
-margin-top:50px;
-background:#0c3c60;
-color:white;
-text-align:center;
-padding:20px;
 }
 
 </style>
@@ -159,170 +69,56 @@ padding:20px;
 
 <body>
 
-<header>
-
-<img src="logo.png">
-
-<h2>BPM MANAGEMENT</h2>
-
-<p>Certificación Manipulación de Alimentos</p>
-
-</header>
-
 <div class="container">
 
-<div class="hero">
-
-<h1>Curso Manipulación de Alimentos</h1>
-
-<p>Certificación bajo Resolución 2674 de 2013</p>
-
-<p style="font-size:24px">⭐⭐⭐⭐⭐</p>
-
-<p>4.9 / 5 basado en más de 1200 estudiantes certificados</p>
-
-</div>
-
-<div class="info">
-
-<h2>¿Cómo obtener tu Carné?</h2>
-
-<ul>
-
-<li>Ver el video de capacitación</li>
-
-<li>Responder la evaluación BPM</li>
-
-<li>Aprobar con mínimo 9 respuestas correctas</li>
-
-<li>Realizar pago por Nequi</li>
-
-<li>Enviar comprobante por WhatsApp</li>
-
-</ul>
-
-</div>
-
-<div class="video">
-
-<h2>Capacitación Manipulación de Alimentos</h2>
-
-<iframe src="https://www.youtube.com/embed/1lq5lVg2jS0" allowfullscreen></iframe>
-
-</div>
-
-<div class="testimonios">
-
-<h2>Opiniones de nuestros estudiantes</h2>
-
-<div class="grid">
-
 <div class="card">
 
-<img src="https://randomuser.me/api/portraits/women/44.jpg">
+<h2>Registro de Estudiante</h2>
 
-<h3>María Rodríguez</h3>
+<input id="nombre" placeholder="Nombre completo">
 
-<p>⭐⭐⭐⭐⭐</p>
+<input id="cedula" placeholder="Cédula">
 
-<p>Excelente curso, obtuve mi certificado el mismo día.</p>
+<input id="email" placeholder="Correo electrónico">
+
+<input id="telefono" placeholder="Teléfono">
+
+<button onclick="registrar()">Continuar</button>
+
+</div>
+
+<div class="card video">
+
+<h2>Video Capacitación</h2>
+
+<iframe src="https://www.youtube.com/embed/1lq5lVg2jS0"></iframe>
 
 </div>
 
 <div class="card">
-
-<img src="https://randomuser.me/api/portraits/men/32.jpg">
-
-<h3>Juan Pérez</h3>
-
-<p>⭐⭐⭐⭐⭐</p>
-
-<p>Muy fácil de realizar. Lo recomiendo para restaurantes.</p>
-
-</div>
-
-<div class="card">
-
-<img src="https://randomuser.me/api/portraits/women/68.jpg">
-
-<h3>Laura Gómez</h3>
-
-<p>⭐⭐⭐⭐⭐</p>
-
-<p>Plataforma muy sencilla y rápida.</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="quiz">
 
 <h2>Evaluación BPM</h2>
 
-<form id="quizForm">
+<p>¿Qué significa BPM?</p>
 
-<div class="question">
+<input type="radio" name="q1" value="1"> Buen proceso mejorado<br>
+<input type="radio" name="q1" value="correct"> Buenas prácticas de manufactura<br>
 
-1. ¿Qué significa BPM?<br>
+<br>
 
-<input type="radio" name="q1"> Buen Procesos Mejorados<br>
-<input type="radio" name="q1"> Business Process Manager<br>
-<input type="radio" name="q1" value="correct"> Buenas Prácticas de Manufactura
+<button onclick="evaluar()">Enviar Evaluación</button>
 
-</div>
-
-<div class="question">
-
-2. Los microorganismos están presentes en el ambiente.<br>
-
-<input type="radio" name="q2" value="correct"> Verdadero<br>
-<input type="radio" name="q2"> Falso
+<p id="resultado"></p>
 
 </div>
 
-<div class="question">
+<div class="card" id="pago">
 
-3. Todos los microorganismos son perjudiciales.<br>
+<h2>Pago de Certificación</h2>
 
-<input type="radio" name="q3"> Verdadero<br>
-<input type="radio" name="q3" value="correct"> Falso
+<p>Realiza el pago por Nequi:</p>
 
-</div>
-
-<div class="question">
-
-4. La higiene personal es importante.<br>
-
-<input type="radio" name="q4" value="correct"> Verdadero<br>
-<input type="radio" name="q4"> Falso
-
-</div>
-
-<div class="question">
-
-5. ¿Qué es inocuidad?<br>
-
-<input type="radio" name="q5"> Alimento adulterado<br>
-<input type="radio" name="q5" value="correct"> Alimento sano<br>
-<input type="radio" name="q5"> Alimento vencido
-
-</div>
-
-<button type="button" onclick="calificar()">Enviar Evaluación</button>
-
-</form>
-
-<div class="resultado" id="resultado"></div>
-
-<div class="nequi" id="nequi">
-
-<h3>🎉 Aprobaste el examen</h3>
-
-<p>Realiza el pago para generar tu Carné.</p>
-
-<p><b>Pago Nequi:</b> 3228129237</p>
+<h3>3228129237</h3>
 
 <button onclick="window.open('https://wa.me/573228129237')">
 
@@ -334,39 +130,29 @@ Enviar comprobante
 
 </div>
 
-</div>
-
-<a class="whatsapp" href="https://wa.me/573228129237" target="_blank">
-
-💬
-
-</a>
-
-<footer>
-
-© BPM MANAGEMENT | Certificación Manipulación de Alimentos
-
-</footer>
-
 <script>
 
-function calificar(){
+function registrar(){
 
-let correctas = document.querySelectorAll('input[value="correct"]:checked').length;
+alert("Registro guardado")
 
-let resultado = document.getElementById("resultado");
+}
 
-if(correctas >= 3){
+function evaluar(){
 
-resultado.innerHTML="✅ Aprobaste con "+correctas+" respuestas correctas.";
+let correctas = document.querySelectorAll('input[value="correct"]:checked').length
 
-document.getElementById("nequi").style.display="block";
+if(correctas>=1){
+
+document.getElementById("resultado").innerHTML="Aprobaste"
+
+document.getElementById("pago").style.display="block"
 
 }
 
 else{
 
-resultado.innerHTML="❌ No aprobaste. Debes repetir la evaluación.";
+document.getElementById("resultado").innerHTML="No aprobaste"
 
 }
 
@@ -375,5 +161,4 @@ resultado.innerHTML="❌ No aprobaste. Debes repetir la evaluación.";
 </script>
 
 </body>
-
 </html>
