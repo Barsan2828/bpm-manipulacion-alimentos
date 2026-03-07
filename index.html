@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Certificación Manipulación de Alimentos</title>
+<title>Certificación Manipulación de Alimentos | BPM</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -14,12 +14,19 @@
 
 body{
 font-family:Poppins;
-background:#f5f7fb;
 margin:0;
+background:#f4f6fa;
+}
+
+header{
+background:#0c3c60;
+color:white;
+text-align:center;
+padding:40px;
 }
 
 .container{
-max-width:900px;
+max-width:1000px;
 margin:auto;
 padding:30px;
 }
@@ -27,9 +34,9 @@ padding:30px;
 .card{
 background:white;
 padding:30px;
+margin-bottom:30px;
 border-radius:10px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
-margin-bottom:30px;
 }
 
 input{
@@ -37,15 +44,15 @@ width:100%;
 padding:12px;
 margin-top:10px;
 margin-bottom:15px;
-border:1px solid #ddd;
 border-radius:6px;
+border:1px solid #ddd;
 }
 
 button{
 background:#0c3c60;
 color:white;
+padding:15px 25px;
 border:none;
-padding:15px 30px;
 border-radius:6px;
 cursor:pointer;
 }
@@ -54,13 +61,34 @@ button:hover{
 background:#072c47;
 }
 
-.video iframe{
+iframe{
 width:100%;
 height:450px;
+border-radius:10px;
+}
+
+.question{
+margin-bottom:20px;
 }
 
 #pago{
 display:none;
+}
+
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+text-decoration:none;
 }
 
 </style>
@@ -68,6 +96,14 @@ display:none;
 </head>
 
 <body>
+
+<header>
+
+<h1>BPM MANAGEMENT</h1>
+
+<p>Certificación Manipulación de Alimentos</p>
+
+</header>
 
 <div class="container">
 
@@ -87,11 +123,11 @@ display:none;
 
 </div>
 
-<div class="card video">
+<div class="card">
 
 <h2>Video Capacitación</h2>
 
-<iframe src="https://www.youtube.com/embed/1lq5lVg2jS0"></iframe>
+<iframe src="https://www.youtube.com/embed/1lq5lVg2jS0" allowfullscreen></iframe>
 
 </div>
 
@@ -99,14 +135,56 @@ display:none;
 
 <h2>Evaluación BPM</h2>
 
-<p>¿Qué significa BPM?</p>
+<form id="quiz">
 
-<input type="radio" name="q1" value="1"> Buen proceso mejorado<br>
+<div class="question">
+
+1. ¿Qué significa BPM?<br>
+
+<input type="radio" name="q1"> Buen proceso mejorado<br>
 <input type="radio" name="q1" value="correct"> Buenas prácticas de manufactura<br>
 
-<br>
+</div>
 
-<button onclick="evaluar()">Enviar Evaluación</button>
+<div class="question">
+
+2. Los microorganismos están presentes en el ambiente.<br>
+
+<input type="radio" name="q2" value="correct"> Verdadero<br>
+<input type="radio" name="q2"> Falso<br>
+
+</div>
+
+<div class="question">
+
+3. Todos los microorganismos son perjudiciales.<br>
+
+<input type="radio" name="q3"> Verdadero<br>
+<input type="radio" name="q3" value="correct"> Falso<br>
+
+</div>
+
+<div class="question">
+
+4. La higiene personal es importante.<br>
+
+<input type="radio" name="q4" value="correct"> Verdadero<br>
+<input type="radio" name="q4"> Falso<br>
+
+</div>
+
+<div class="question">
+
+5. ¿Qué es inocuidad?<br>
+
+<input type="radio" name="q5"> Alimento contaminado<br>
+<input type="radio" name="q5" value="correct"> Alimento seguro<br>
+
+</div>
+
+<button type="button" onclick="evaluar()">Enviar Evaluación</button>
+
+</form>
 
 <p id="resultado"></p>
 
@@ -114,7 +192,7 @@ display:none;
 
 <div class="card" id="pago">
 
-<h2>Pago de Certificación</h2>
+<h2>Pago del Carné</h2>
 
 <p>Realiza el pago por Nequi:</p>
 
@@ -130,9 +208,32 @@ Enviar comprobante
 
 </div>
 
+<a class="whatsapp" href="https://wa.me/573228129237">
+
+💬
+
+</a>
+
 <script>
 
 function registrar(){
+
+let datos = {
+
+nombre:document.getElementById("nombre").value,
+cedula:document.getElementById("cedula").value,
+email:document.getElementById("email").value,
+telefono:document.getElementById("telefono").value,
+resultado:"Pendiente"
+
+}
+
+fetch("AQUI_TU_LINK_GOOGLE_SCRIPT",{
+
+method:"POST",
+body:JSON.stringify(datos)
+
+})
 
 alert("Registro guardado")
 
@@ -140,11 +241,11 @@ alert("Registro guardado")
 
 function evaluar(){
 
-let correctas = document.querySelectorAll('input[value="correct"]:checked').length
+let correctas=document.querySelectorAll('input[value="correct"]:checked').length
 
-if(correctas>=1){
+if(correctas>=3){
 
-document.getElementById("resultado").innerHTML="Aprobaste"
+document.getElementById("resultado").innerHTML="Aprobaste el examen"
 
 document.getElementById("pago").style.display="block"
 
