@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Certificación Manipulación de Alimentos | BPM Management</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
 
 body{
-font-family: Arial, sans-serif;
+font-family:Poppins;
 margin:0;
-background:#f4f6f9;
+background:#f4f6fa;
 color:#333;
 }
 
 header{
-background:#0b3c5d;
+background:#0c3c60;
 color:white;
-padding:30px;
+padding:40px;
 text-align:center;
 }
 
@@ -27,31 +31,44 @@ width:120px;
 }
 
 .container{
-max-width:1000px;
+max-width:1100px;
 margin:auto;
-padding:20px;
+padding:30px;
 }
 
-h2{
-color:#0b3c5d;
-}
-
-.video-box{
+.hero{
 text-align:center;
-margin:30px 0;
+margin-bottom:40px;
+}
+
+.hero h1{
+font-size:36px;
+}
+
+.info{
+background:white;
+padding:25px;
+border-radius:10px;
+margin-bottom:30px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.video{
+text-align:center;
+margin:40px 0;
 }
 
 iframe{
 width:100%;
-height:450px;
+height:500px;
 border-radius:10px;
 }
 
 .quiz{
 background:white;
-padding:25px;
+padding:30px;
 border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
 .question{
@@ -59,28 +76,31 @@ margin-bottom:20px;
 }
 
 button{
-background:#0b3c5d;
+background:#0c3c60;
 color:white;
 padding:15px 30px;
 border:none;
 border-radius:6px;
-cursor:pointer;
 font-size:16px;
+cursor:pointer;
 }
 
 button:hover{
-background:#072b42;
+background:#072c47;
 }
 
-.result{
+.resultado{
 margin-top:20px;
-font-size:18px;
-font-weight:bold;
+font-size:20px;
+font-weight:600;
 }
 
 .nequi{
 display:none;
-margin-top:20px;
+margin-top:30px;
+background:#e9f7ef;
+padding:20px;
+border-radius:10px;
 }
 
 .whatsapp{
@@ -97,14 +117,14 @@ align-items:center;
 justify-content:center;
 font-size:30px;
 text-decoration:none;
-box-shadow:0 0 10px rgba(0,0,0,0.3);
+box-shadow:0 0 15px rgba(0,0,0,0.3);
 }
 
 footer{
+background:#0c3c60;
+color:white;
 text-align:center;
 padding:20px;
-background:#0b3c5d;
-color:white;
 margin-top:40px;
 }
 
@@ -118,21 +138,25 @@ margin-top:40px;
 
 <img src="logo.png">
 
-<h1>Curso Manipulación de Alimentos</h1>
+<h2>BPM MANAGEMENT</h2>
 
-<p>BPM MANAGEMENT</p>
-
-<p>Registro Capacitación 012-34</p>
+<p>Certificación Manipulación de Alimentos</p>
 
 </header>
 
 <div class="container">
 
-<h2>Capacitación Manipulación de Alimentos</h2>
+<div class="hero">
 
-<p>
-Para obtener tu carné debes:
-</p>
+<h1>Curso Manipulación de Alimentos</h1>
+
+<p>Certificación bajo Resolución 2674 de 2013</p>
+
+</div>
+
+<div class="info">
+
+<h2>¿Cómo obtener tu Carné?</h2>
 
 <ul>
 
@@ -142,17 +166,19 @@ Para obtener tu carné debes:
 
 <li>Aprobar con mínimo 9 respuestas correctas</li>
 
-<li>Realizar el pago por Nequi</li>
+<li>Realizar pago por Nequi</li>
+
+<li>Enviar comprobante por WhatsApp</li>
 
 </ul>
 
-<div class="video-box">
+</div>
 
-<h2>Video Capacitación</h2>
+<div class="video">
 
-<iframe src="https://www.youtube.com/embed/1lq5lVg2jS0"
-allowfullscreen>
-</iframe>
+<h2>Capacitación Manipulación de Alimentos</h2>
+
+<iframe src="https://www.youtube.com/embed/1lq5lVg2jS0" allowfullscreen></iframe>
 
 </div>
 
@@ -163,116 +189,70 @@ allowfullscreen>
 <form id="quizForm">
 
 <div class="question">
+
 1. ¿Qué significa BPM?<br>
-<input type="radio" name="q1" value="correct"> Buenas Prácticas de Manufactura<br>
-<input type="radio" name="q1"> Buen Procesos Mejorados<br>
-<input type="radio" name="q1"> Business Party Manager
+
+<input type="radio" name="q1" value="1"> Buen Procesos Mejorados<br>
+<input type="radio" name="q1" value="2"> Business Process Manager<br>
+<input type="radio" name="q1" value="correct"> Buenas Prácticas de Manufactura
+
 </div>
 
 <div class="question">
+
 2. Los microorganismos están presentes en el ambiente.<br>
+
 <input type="radio" name="q2" value="correct"> Verdadero<br>
-<input type="radio" name="q2"> Falso
+<input type="radio" name="q2" value="1"> Falso
+
 </div>
 
 <div class="question">
+
 3. Todos los microorganismos son perjudiciales.<br>
-<input type="radio" name="q3"> Verdadero<br>
+
+<input type="radio" name="q3" value="1"> Verdadero<br>
 <input type="radio" name="q3" value="correct"> Falso
+
 </div>
 
 <div class="question">
-4. El manipulador de alimentos es:<br>
-<input type="radio" name="q4"> Solo quien cocina<br>
-<input type="radio" name="q4" value="correct"> Persona que produce, transporta o manipula alimentos<br>
-<input type="radio" name="q4"> Cliente
+
+4. La higiene personal es importante.<br>
+
+<input type="radio" name="q4" value="correct"> Verdadero<br>
+<input type="radio" name="q4"> Falso
+
 </div>
 
 <div class="question">
+
 5. ¿Qué es inocuidad?<br>
+
 <input type="radio" name="q5"> Alimento adulterado<br>
 <input type="radio" name="q5" value="correct"> Alimento sano<br>
 <input type="radio" name="q5"> Alimento vencido
-</div>
 
-<div class="question">
-6. El lavado de manos evita contaminación.<br>
-<input type="radio" name="q6" value="correct"> Verdadero<br>
-<input type="radio" name="q6"> Falso
 </div>
-
-<div class="question">
-7. El uso de gorro en cocina es:<br>
-<input type="radio" name="q7" value="correct"> Obligatorio<br>
-<input type="radio" name="q7"> Opcional
-</div>
-
-<div class="question">
-8. La limpieza elimina suciedad visible.<br>
-<input type="radio" name="q8" value="correct"> Verdadero<br>
-<input type="radio" name="q8"> Falso
-</div>
-
-<div class="question">
-9. La desinfección elimina microorganismos.<br>
-<input type="radio" name="q9" value="correct"> Verdadero<br>
-<input type="radio" name="q9"> Falso
-</div>
-
-<div class="question">
-10. Las plagas contaminan alimentos.<br>
-<input type="radio" name="q10" value="correct"> Verdadero<br>
-<input type="radio" name="q10"> Falso
-</div>
-
-<div class="question">
-11. Se debe lavar manos antes de manipular alimentos.<br>
-<input type="radio" name="q11" value="correct"> Verdadero<br>
-<input type="radio" name="q11"> Falso
-</div>
-
-<div class="question">
-12. Las superficies deben limpiarse constantemente.<br>
-<input type="radio" name="q12" value="correct"> Verdadero<br>
-<input type="radio" name="q12"> Falso
-</div>
-
-<div class="question">
-13. Los alimentos deben almacenarse correctamente.<br>
-<input type="radio" name="q13" value="correct"> Verdadero<br>
-<input type="radio" name="q13"> Falso
-</div>
-
-<div class="question">
-14. La contaminación cruzada es peligrosa.<br>
-<input type="radio" name="q14" value="correct"> Verdadero<br>
-<input type="radio" name="q14"> Falso
-</div>
-
-<div class="question">
-15. El manipulador debe mantener higiene personal.<br>
-<input type="radio" name="q15" value="correct"> Verdadero<br>
-<input type="radio" name="q15"> Falso
-</div>
-
-<br>
 
 <button type="button" onclick="calificar()">Enviar Evaluación</button>
 
 </form>
 
-<div class="result" id="resultado"></div>
+<div class="resultado" id="resultado"></div>
 
 <div class="nequi" id="nequi">
 
-<h3>✅ Aprobaste la evaluación</h3>
+<h3>🎉 Aprobaste el examen</h3>
 
-<p>Ahora puedes realizar el pago por Nequi para generar tu carné.</p>
+<p>Ahora realiza el pago para generar tu Carné de Manipulación de Alimentos.</p>
 
-<p><b>Nequi:</b> 3228129237</p>
+<p><b>Pago por Nequi:</b> 3228129237</p>
 
 <button onclick="window.open('https://wa.me/573228129237')">
+
 Enviar comprobante
+
 </button>
 
 </div>
@@ -281,16 +261,15 @@ Enviar comprobante
 
 </div>
 
-<a class="whatsapp"
-href="https://wa.me/573228129237"
-target="_blank">
+<a class="whatsapp" href="https://wa.me/573228129237" target="_blank">
+
 💬
+
 </a>
 
 <footer>
 
-BPM MANAGEMENT © 2025  
-Curso Manipulación de Alimentos
+© BPM MANAGEMENT | Certificación Manipulación de Alimentos
 
 </footer>
 
@@ -302,9 +281,9 @@ let correctas = document.querySelectorAll('input[value="correct"]:checked').leng
 
 let resultado = document.getElementById("resultado");
 
-if(correctas >= 9){
+if(correctas >= 3){
 
-resultado.innerHTML = "Aprobaste con "+correctas+" respuestas correctas.";
+resultado.innerHTML="✅ Aprobaste con "+correctas+" respuestas correctas.";
 
 document.getElementById("nequi").style.display="block";
 
@@ -312,7 +291,7 @@ document.getElementById("nequi").style.display="block";
 
 else{
 
-resultado.innerHTML = "No aprobaste. Obtuviste "+correctas+" respuestas correctas. Debes repetir la evaluación.";
+resultado.innerHTML="❌ No aprobaste. Debes repetir la evaluación.";
 
 }
 
@@ -321,4 +300,5 @@ resultado.innerHTML = "No aprobaste. Obtuviste "+correctas+" respuestas correcta
 </script>
 
 </body>
+
 </html>
