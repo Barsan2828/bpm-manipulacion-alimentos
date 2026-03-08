@@ -3,418 +3,79 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BPM Management | Consultoría y Certificación BPM</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>Curso Manipulación de Alimentos</title>
 
 <style>
 
-*{box-sizing:border-box}
-
 body{
-font-family:'Poppins',sans-serif;
-margin:0;
-background:#f4f7fb;
-color:#333;
-}
-
-header{
-background:linear-gradient(120deg,#0a3d6b,#0e6cc4);
-color:white;
-padding:90px 20px;
+font-family:Arial;
+background:#f4f6f9;
 text-align:center;
+padding:40px;
 }
 
-header h1{
-font-size:52px;
-margin:0;
-font-weight:700;
-}
-
-header p{
-font-size:20px;
-margin-top:10px;
-opacity:.95;
-}
-
-.hero-buttons{
-margin-top:30px;
-}
-
-.btn{
-background:#25D366;
-padding:16px 36px;
-color:white;
-text-decoration:none;
-border-radius:40px;
-font-weight:600;
-margin:10px;
-display:inline-block;
-}
-
-.btn-secondary{
+.form-box{
 background:white;
-color:#0e6cc4;
-}
-
-section{
-padding:80px 10%;
-}
-
-h2{
-text-align:center;
-color:#0a3d6b;
-margin-bottom:50px;
-font-size:32px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-}
-
-.card{
-background:white;
-padding:35px;
-border-radius:12px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-}
-
-.card h3{
-color:#0e6cc4;
-margin-top:0;
-}
-
-.benefits{
-background:#eef4fb;
-}
-
-.steps{
-background:white;
-}
-
-.step{
-text-align:center;
-padding:25px;
-}
-
-.number{
-width:55px;
-height:55px;
-border-radius:50%;
-background:#0e6cc4;
-color:white;
-display:flex;
-align-items:center;
-justify-content:center;
-font-weight:bold;
+padding:40px;
+max-width:500px;
 margin:auto;
-margin-bottom:15px;
-}
-
-.testimonials{
-background:#f7f7f7;
-}
-
-.testimonial{
-background:white;
-padding:25px;
 border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
 }
 
-.stars{
-color:#f5b301;
-font-size:18px;
-margin-bottom:10px;
-}
-
-.cta-section{
-background:linear-gradient(120deg,#0a3d6b,#0e6cc4);
-color:white;
-text-align:center;
-}
-
-form{
-max-width:550px;
-margin:auto;
-}
-
-input,textarea,select{
+input{
 width:100%;
-padding:14px;
-margin-top:10px;
-border-radius:8px;
-border:1px solid #ddd;
-font-family:'Poppins';
+padding:12px;
+margin:10px 0;
+border-radius:6px;
+border:1px solid #ccc;
 }
 
 button{
-margin-top:20px;
-padding:16px 40px;
+background:#25D366;
+color:white;
+padding:14px 30px;
 border:none;
-background:#25D366;
-color:white;
-border-radius:40px;
-font-weight:600;
+border-radius:30px;
 font-size:16px;
-}
-
-.stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:30px;
-text-align:center;
-}
-
-.stat-number{
-font-size:36px;
-font-weight:700;
-color:#0e6cc4;
-}
-
-footer{
-text-align:center;
-padding:40px;
-background:#072d4f;
-color:white;
-}
-
-.whatsapp{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
-color:white;
-padding:18px 20px;
-border-radius:50%;
-font-size:28px;
-text-decoration:none;
-box-shadow:0 5px 15px rgba(0,0,0,0.3);
+cursor:pointer;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<header>
+<div class="form-box">
 
-<h1>BPM MANAGEMENT</h1>
+<h2>Registro Curso Manipulación de Alimentos</h2>
 
-<p>Consultoría, Implementación y Certificación en Buenas Prácticas de Manufactura</p>
+<input type="text" id="nombre" placeholder="Nombre completo">
 
-<div class="hero-buttons">
-<a class="btn" href="https://wa.me/573228129237" target="_blank">Hablar por WhatsApp</a>
-<a class="btn btn-secondary" href="#servicios">Ver Servicios</a>
-</div>
+<input type="text" id="cedula" placeholder="Número de documento">
 
-</header>
+<input type="email" id="correo" placeholder="Correo electrónico">
 
-<section>
+<input type="tel" id="telefono" placeholder="Teléfono">
 
-<h2>Empresas que Confían en Nosotros</h2>
-
-<div class="stats">
-
-<div>
-<div class="stat-number">150+</div>
-<p>Empresas asesoradas</p>
-</div>
-
-<div>
-<div class="stat-number">10+</div>
-<p>Años de experiencia</p>
-</div>
-
-<div>
-<div class="stat-number">500+</div>
-<p>Personas capacitadas</p>
-</div>
-
-<div>
-<div class="stat-number">100%</div>
-<p>Cumplimiento normativo</p>
-</div>
+<button onclick="registrar()">Registrarme</button>
 
 </div>
 
-</section>
+<script>
 
-<section id="servicios">
+function registrar(){
 
-<h2>Servicios Especializados</h2>
+let nombre=document.getElementById("nombre").value
 
-<div class="grid">
+localStorage.setItem("estudiante",nombre)
 
-<div class="card">
-<h3>Implementación BPM</h3>
-<p>Implementamos Buenas Prácticas de Manufactura según normativa sanitaria.</p>
-</div>
+window.location="certificado.html"
 
-<div class="card">
-<h3>Plan de Saneamiento Básico</h3>
-<p>Programas de limpieza, desinfección, control de plagas y manejo de residuos.</p>
-</div>
+}
 
-<div class="card">
-<h3>Trámites INVIMA</h3>
-<p>Gestión de registros sanitarios y documentación requerida.</p>
-</div>
-
-<div class="card">
-<h3>Auditorías BPM y HACCP</h3>
-<p>Evaluaciones internas para mejorar el cumplimiento normativo.</p>
-</div>
-
-<div class="card">
-<h3>Capacitación Manipulación de Alimentos</h3>
-<p>Formación certificada para manipuladores de alimentos.</p>
-</div>
-
-<div class="card">
-<h3>Diseño de Plantas</h3>
-<p>Diseño sanitario de instalaciones para producción de alimentos.</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="benefits">
-
-<h2>¿Por qué elegir BPM Management?</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Especialistas en inocuidad</h3>
-<p>Equipo experto en normatividad sanitaria y control de calidad.</p>
-</div>
-
-<div class="card">
-<h3>Cumplimiento INVIMA</h3>
-<p>Implementación alineada con normativa nacional.</p>
-</div>
-
-<div class="card">
-<h3>Acompañamiento total</h3>
-<p>Seguimiento durante todo el proceso de implementación.</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="steps">
-
-<h2>Cómo Trabajamos</h2>
-
-<div class="grid">
-
-<div class="step">
-<div class="number">1</div>
-<h3>Diagnóstico</h3>
-<p>Evaluamos el estado actual de tu empresa.</p>
-</div>
-
-<div class="step">
-<div class="number">2</div>
-<h3>Implementación</h3>
-<p>Diseñamos los programas sanitarios requeridos.</p>
-</div>
-
-<div class="step">
-<div class="number">3</div>
-<h3>Capacitación</h3>
-<p>Formamos al personal manipulador de alimentos.</p>
-</div>
-
-<div class="step">
-<div class="number">4</div>
-<h3>Auditoría</h3>
-<p>Validamos el cumplimiento normativo.</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="testimonials">
-
-<h2>Opiniones de Nuestros Clientes</h2>
-
-<div class="grid">
-
-<div class="testimonial">
-<div class="stars">★★★★★</div>
-<p>Excelente asesoría para implementar BPM en nuestro restaurante.</p>
-<strong>Restaurante Empresarial</strong>
-</div>
-
-<div class="testimonial">
-<div class="stars">★★★★★</div>
-<p>Gracias a su apoyo logramos obtener nuestro registro sanitario.</p>
-<strong>Empresa de alimentos</strong>
-</div>
-
-<div class="testimonial">
-<div class="stars">★★★★★</div>
-<p>Capacitaciones claras y muy profesionales.</p>
-<strong>Industria gastronómica</strong>
-</div>
-
-</div>
-
-</section>
-
-<section class="cta-section">
-
-<h2>Solicita una Asesoría Profesional</h2>
-
-<p>Déjanos tus datos y uno de nuestros consultores te contactará.</p>
-
-<form>
-
-<input type="text" placeholder="Nombre" required>
-
-<input type="tel" placeholder="Teléfono">
-
-<input type="email" placeholder="Correo electrónico" required>
-
-<select>
-<option>Servicio de interés</option>
-<option>Implementación BPM</option>
-<option>Registro INVIMA</option>
-<option>Capacitación Manipulación de Alimentos</option>
-<option>Auditoría BPM</option>
-</select>
-
-<textarea rows="4" placeholder="Mensaje"></textarea>
-
-<button type="submit">Solicitar Información</button>
-
-</form>
-
-</section>
-
-<footer>
-
-<p>BPM Asesorías y Consultorías</p>
-<p>Correo: bpmasesoriasyconsultorias@gmail.com</p>
-<p>Instagram: @BPMMANAGEMENT</p>
-<p>Facebook: BPM Asesorías y Consultorías</p>
-
-</footer>
-
-<a class="whatsapp" href="https://wa.me/573228129237" target="_blank">💬</a>
+</script>
 
 </body>
 </html>
