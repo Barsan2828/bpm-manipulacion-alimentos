@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Carné BPM</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<style>
+
+body{
+font-family:Arial;
+text-align:center;
+}
+
+.card{
+width:320px;
+margin:auto;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h2>CARNÉ BPM</h2>
+
+<p id="nombre"></p>
+
+<div id="qrcode"></div>
+
+</div>
+
+<script>
+
+let nombre = localStorage.getItem("estudiante")
+
+document.getElementById("nombre").innerHTML = nombre
+
+new QRCode(document.getElementById("qrcode"),{
+text:nombre,
+width:120,
+height:120
+})
+
+</script>
+
+</body>
+</html>
