@@ -3,79 +3,188 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BPM Management | Asesorías y Consultorías</title>
+<title>BPM Management | Consultoría y Certificación BPM</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
+*{box-sizing:border-box}
+
 body{
-font-family: Arial, Helvetica, sans-serif;
+font-family:'Poppins',sans-serif;
 margin:0;
-background:#f5f7fa;
+background:#f4f7fb;
 color:#333;
 }
 
 header{
-background:#0a4c8a;
+background:linear-gradient(120deg,#0a3d6b,#0e6cc4);
 color:white;
-padding:40px;
+padding:90px 20px;
 text-align:center;
 }
 
 header h1{
-font-size:40px;
+font-size:52px;
 margin:0;
+font-weight:700;
 }
 
 header p{
-font-size:18px;
+font-size:20px;
 margin-top:10px;
+opacity:.95;
+}
+
+.hero-buttons{
+margin-top:30px;
 }
 
 .btn{
 background:#25D366;
+padding:16px 36px;
 color:white;
-padding:15px 30px;
-border-radius:30px;
 text-decoration:none;
-font-weight:bold;
+border-radius:40px;
+font-weight:600;
+margin:10px;
 display:inline-block;
-margin-top:20px;
+}
+
+.btn-secondary{
+background:white;
+color:#0e6cc4;
 }
 
 section{
-padding:60px 10%;
+padding:80px 10%;
 }
 
 h2{
-color:#0a4c8a;
-margin-bottom:20px;
+text-align:center;
+color:#0a3d6b;
+margin-bottom:50px;
+font-size:32px;
 }
 
-.servicios{
+.grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
 }
 
 .card{
 background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+padding:35px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
 }
 
 .card h3{
-color:#0a4c8a;
+color:#0e6cc4;
+margin-top:0;
 }
 
-.footer{
-background:#0a4c8a;
+.benefits{
+background:#eef4fb;
+}
+
+.steps{
+background:white;
+}
+
+.step{
+text-align:center;
+padding:25px;
+}
+
+.number{
+width:55px;
+height:55px;
+border-radius:50%;
+background:#0e6cc4;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+margin:auto;
+margin-bottom:15px;
+}
+
+.testimonials{
+background:#f7f7f7;
+}
+
+.testimonial{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.stars{
+color:#f5b301;
+font-size:18px;
+margin-bottom:10px;
+}
+
+.cta-section{
+background:linear-gradient(120deg,#0a3d6b,#0e6cc4);
 color:white;
 text-align:center;
-padding:30px;
 }
 
-/* Botón flotante WhatsApp */
+form{
+max-width:550px;
+margin:auto;
+}
+
+input,textarea,select{
+width:100%;
+padding:14px;
+margin-top:10px;
+border-radius:8px;
+border:1px solid #ddd;
+font-family:'Poppins';
+}
+
+button{
+margin-top:20px;
+padding:16px 40px;
+border:none;
+background:#25D366;
+color:white;
+border-radius:40px;
+font-weight:600;
+font-size:16px;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+text-align:center;
+}
+
+.stat-number{
+font-size:36px;
+font-weight:700;
+color:#0e6cc4;
+}
+
+footer{
+text-align:center;
+padding:40px;
+background:#072d4f;
+color:white;
+}
 
 .whatsapp{
 position:fixed;
@@ -83,14 +192,15 @@ bottom:25px;
 right:25px;
 background:#25D366;
 color:white;
-font-size:28px;
-padding:15px 18px;
+padding:18px 20px;
 border-radius:50%;
+font-size:28px;
 text-decoration:none;
-box-shadow:0 5px 10px rgba(0,0,0,0.3);
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
 </style>
+
 </head>
 
 <body>
@@ -99,168 +209,212 @@ box-shadow:0 5px 10px rgba(0,0,0,0.3);
 
 <h1>BPM MANAGEMENT</h1>
 
-<p>Asesorías y Consultorías en Inocuidad Alimentaria y Sistemas de Gestión</p>
+<p>Consultoría, Implementación y Certificación en Buenas Prácticas de Manufactura</p>
 
-<a class="btn" href="https://wa.me/573228129237" target="_blank">
-Solicitar Asesoría
-</a>
+<div class="hero-buttons">
+<a class="btn" href="https://wa.me/573228129237" target="_blank">Hablar por WhatsApp</a>
+<a class="btn btn-secondary" href="#servicios">Ver Servicios</a>
+</div>
 
 </header>
 
 <section>
 
-<h2>Nuestros Servicios</h2>
+<h2>Empresas que Confían en Nosotros</h2>
 
-<div class="servicios">
+<div class="stats">
 
-<div class="card">
-<h3>Plan de Saneamiento Básico</h3>
-<p>Diseñamos e implementamos programas que garantizan la inocuidad en los procesos alimentarios.</p>
+<div>
+<div class="stat-number">150+</div>
+<p>Empresas asesoradas</p>
 </div>
+
+<div>
+<div class="stat-number">10+</div>
+<p>Años de experiencia</p>
+</div>
+
+<div>
+<div class="stat-number">500+</div>
+<p>Personas capacitadas</p>
+</div>
+
+<div>
+<div class="stat-number">100%</div>
+<p>Cumplimiento normativo</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="servicios">
+
+<h2>Servicios Especializados</h2>
+
+<div class="grid">
 
 <div class="card">
 <h3>Implementación BPM</h3>
-<p>Implementación de Buenas Prácticas de Manufactura y sistemas de gestión de calidad.</p>
+<p>Implementamos Buenas Prácticas de Manufactura según normativa sanitaria.</p>
 </div>
 
 <div class="card">
-<h3>Consultoría Alimentaria</h3>
-<p>Asesoría especializada para empresas del sector alimentos.</p>
+<h3>Plan de Saneamiento Básico</h3>
+<p>Programas de limpieza, desinfección, control de plagas y manejo de residuos.</p>
 </div>
 
 <div class="card">
 <h3>Trámites INVIMA</h3>
-<p>Gestión de registros sanitarios, permisos y requisitos regulatorios.</p>
+<p>Gestión de registros sanitarios y documentación requerida.</p>
+</div>
+
+<div class="card">
+<h3>Auditorías BPM y HACCP</h3>
+<p>Evaluaciones internas para mejorar el cumplimiento normativo.</p>
 </div>
 
 <div class="card">
 <h3>Capacitación Manipulación de Alimentos</h3>
-<p>Cursos certificados y programas de capacitación continua.</p>
-</div>
-
-<div class="card">
-<h3>Desarrollo de Productos</h3>
-<p>Estandarización y formulación de nuevos productos alimentarios.</p>
+<p>Formación certificada para manipuladores de alimentos.</p>
 </div>
 
 <div class="card">
 <h3>Diseño de Plantas</h3>
-<p>Estructuración de plantas de producción cumpliendo normativa sanitaria.</p>
-</div>
-
-<div class="card">
-<h3>Mantenimiento Sistema de Calidad</h3>
-<p>Seguimiento y mejora continua de los sistemas de gestión.</p>
+<p>Diseño sanitario de instalaciones para producción de alimentos.</p>
 </div>
 
 </div>
 
 </section>
 
+<section class="benefits">
 
-<section>
+<h2>¿Por qué elegir BPM Management?</h2>
 
-<h2>Auditorías BPM y HACCP</h2>
-
-<p>
-Evaluamos su sistema de gestión de calidad mediante auditorías internas
-adaptadas a los objetivos y necesidades de cada empresa.
-</p>
-
-</section>
-
-
-<section>
-
-<h2>Programas de Saneamiento</h2>
-
-<div class="servicios">
+<div class="grid">
 
 <div class="card">
-<h3>Limpieza y Desinfección</h3>
-<p>Protocolos para áreas, equipos, utensilios y manipuladores.</p>
+<h3>Especialistas en inocuidad</h3>
+<p>Equipo experto en normatividad sanitaria y control de calidad.</p>
 </div>
 
 <div class="card">
-<h3>Control de Plagas</h3>
-<p>Medidas preventivas para evitar infestaciones.</p>
+<h3>Cumplimiento INVIMA</h3>
+<p>Implementación alineada con normativa nacional.</p>
 </div>
 
 <div class="card">
-<h3>Gestión de Residuos</h3>
-<p>Programas para el manejo adecuado de desechos sólidos.</p>
-</div>
-
-<div class="card">
-<h3>Calidad del Agua</h3>
-<p>Control y verificación de la calidad del agua utilizada.</p>
+<h3>Acompañamiento total</h3>
+<p>Seguimiento durante todo el proceso de implementación.</p>
 </div>
 
 </div>
 
 </section>
 
+<section class="steps">
 
-<section>
+<h2>Cómo Trabajamos</h2>
 
-<h2>Servicios Complementarios</h2>
+<div class="grid">
 
-<div class="servicios">
-
-<div class="card">
-<h3>Análisis de Laboratorio</h3>
-<p>Microbiológicos, fisicoquímicos y metrológicos.</p>
+<div class="step">
+<div class="number">1</div>
+<h3>Diagnóstico</h3>
+<p>Evaluamos el estado actual de tu empresa.</p>
 </div>
 
-<div class="card">
-<h3>Productos de Limpieza</h3>
-<p>Detergentes, desengrasantes y desinfectantes industriales.</p>
+<div class="step">
+<div class="number">2</div>
+<h3>Implementación</h3>
+<p>Diseñamos los programas sanitarios requeridos.</p>
 </div>
 
-<div class="card">
-<h3>SGSST</h3>
-<p>Diagnóstico e implementación del Sistema de Seguridad y Salud en el Trabajo.</p>
+<div class="step">
+<div class="number">3</div>
+<h3>Capacitación</h3>
+<p>Formamos al personal manipulador de alimentos.</p>
 </div>
 
-<div class="card">
-<h3>Exámenes Ocupacionales</h3>
-<p>Servicios médicos ocupacionales con aliados estratégicos.</p>
+<div class="step">
+<div class="number">4</div>
+<h3>Auditoría</h3>
+<p>Validamos el cumplimiento normativo.</p>
 </div>
 
 </div>
 
 </section>
 
+<section class="testimonials">
 
-<section style="background:#0a4c8a;color:white;text-align:center">
+<h2>Opiniones de Nuestros Clientes</h2>
 
-<h2>Contáctanos</h2>
+<div class="grid">
 
-<p>Recibe asesoría personalizada para tu empresa.</p>
+<div class="testimonial">
+<div class="stars">★★★★★</div>
+<p>Excelente asesoría para implementar BPM en nuestro restaurante.</p>
+<strong>Restaurante Empresarial</strong>
+</div>
 
-<a class="btn" href="https://wa.me/573228129237" target="_blank">
-Hablar por WhatsApp
-</a>
+<div class="testimonial">
+<div class="stars">★★★★★</div>
+<p>Gracias a su apoyo logramos obtener nuestro registro sanitario.</p>
+<strong>Empresa de alimentos</strong>
+</div>
+
+<div class="testimonial">
+<div class="stars">★★★★★</div>
+<p>Capacitaciones claras y muy profesionales.</p>
+<strong>Industria gastronómica</strong>
+</div>
+
+</div>
 
 </section>
 
+<section class="cta-section">
 
-<div class="footer">
+<h2>Solicita una Asesoría Profesional</h2>
+
+<p>Déjanos tus datos y uno de nuestros consultores te contactará.</p>
+
+<form>
+
+<input type="text" placeholder="Nombre" required>
+
+<input type="tel" placeholder="Teléfono">
+
+<input type="email" placeholder="Correo electrónico" required>
+
+<select>
+<option>Servicio de interés</option>
+<option>Implementación BPM</option>
+<option>Registro INVIMA</option>
+<option>Capacitación Manipulación de Alimentos</option>
+<option>Auditoría BPM</option>
+</select>
+
+<textarea rows="4" placeholder="Mensaje"></textarea>
+
+<button type="submit">Solicitar Información</button>
+
+</form>
+
+</section>
+
+<footer>
 
 <p>BPM Asesorías y Consultorías</p>
-
-<p>Email: bpmasesoriasyconsultorias@gmail.com</p>
-
+<p>Correo: bpmasesoriasyconsultorias@gmail.com</p>
 <p>Instagram: @BPMMANAGEMENT</p>
+<p>Facebook: BPM Asesorías y Consultorías</p>
 
-<p>Facebook: @BpmAsesoriasyConsultorias</p>
+</footer>
 
-</div>
-
-
-<a class="whatsapp" href="https://wa.me/573228129237" target="_blank">
-💬
-</a>
+<a class="whatsapp" href="https://wa.me/573228129237" target="_blank">💬</a>
 
 </body>
 </html>
