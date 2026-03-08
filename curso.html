@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Registro Curso BPM</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f4f6f9;
+text-align:center;
+padding:40px;
+}
+
+.form-box{
+background:white;
+padding:40px;
+max-width:500px;
+margin:auto;
+border-radius:10px;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
+input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+button{
+background:#25D366;
+color:white;
+padding:14px 30px;
+border:none;
+border-radius:30px;
+font-size:16px;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="form-box">
+
+<h2>Registro Curso Manipulación de Alimentos</h2>
+
+<input type="text" id="nombre" placeholder="Nombre completo">
+
+<input type="text" id="cedula" placeholder="Número de documento">
+
+<input type="email" id="correo" placeholder="Correo electrónico">
+
+<input type="tel" id="telefono" placeholder="Teléfono">
+
+<button onclick="registrar()">Registrarme</button>
+
+</div>
+
+<script>
+
+function registrar(){
+
+let nombre = document.getElementById("nombre").value
+
+localStorage.setItem("estudiante", nombre)
+
+window.location = "certificado.html"
+
+}
+
+</script>
+
+</body>
+</html>
