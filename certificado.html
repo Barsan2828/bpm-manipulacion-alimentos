@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Certificado BPM</title>
+
+<style>
+
+body{
+text-align:center;
+font-family:Arial;
+}
+
+.certificado{
+border:5px solid #0e6cc4;
+padding:50px;
+margin:50px;
+}
+
+.nombre{
+font-size:32px;
+font-weight:bold;
+color:#0e6cc4;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="certificado">
+
+<h1>CERTIFICADO</h1>
+
+<p>Se certifica que</p>
+
+<div class="nombre" id="nombre"></div>
+
+<p>Ha aprobado el curso de</p>
+
+<h2>Manipulación de Alimentos</h2>
+
+<p>BPM MANAGEMENT</p>
+
+</div>
+
+<script>
+
+document.getElementById("nombre").innerHTML =
+localStorage.getItem("estudiante")
+
+</script>
+
+</body>
+</html>
