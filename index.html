@@ -1,79 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Certificación Manipulación de Alimentos | BPM</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<title>BPM Management | Asesorías y Consultorías</title>
 
 <style>
 
 body{
-font-family:Poppins;
+font-family: Arial, Helvetica, sans-serif;
 margin:0;
-background:#f4f6fa;
+background:#f5f7fa;
+color:#333;
 }
 
 header{
-background:#0c3c60;
+background:#0a4c8a;
 color:white;
-text-align:center;
 padding:40px;
+text-align:center;
 }
 
-.container{
-max-width:1000px;
-margin:auto;
-padding:30px;
+header h1{
+font-size:40px;
+margin:0;
+}
+
+header p{
+font-size:18px;
+margin-top:10px;
+}
+
+.btn{
+background:#25D366;
+color:white;
+padding:15px 30px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+display:inline-block;
+margin-top:20px;
+}
+
+section{
+padding:60px 10%;
+}
+
+h2{
+color:#0a4c8a;
+margin-bottom:20px;
+}
+
+.servicios{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
 .card{
 background:white;
-padding:30px;
-margin-bottom:30px;
+padding:25px;
 border-radius:10px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
-input{
-width:100%;
-padding:12px;
-margin-top:10px;
-margin-bottom:15px;
-border-radius:6px;
-border:1px solid #ddd;
+.card h3{
+color:#0a4c8a;
 }
 
-button{
-background:#0c3c60;
+.footer{
+background:#0a4c8a;
 color:white;
-padding:15px 25px;
-border:none;
-border-radius:6px;
-cursor:pointer;
+text-align:center;
+padding:30px;
 }
 
-button:hover{
-background:#072c47;
-}
-
-iframe{
-width:100%;
-height:450px;
-border-radius:10px;
-}
-
-.question{
-margin-bottom:20px;
-}
-
-#pago{
-display:none;
-}
+/* Botón flotante WhatsApp */
 
 .whatsapp{
 position:fixed;
@@ -81,18 +83,14 @@ bottom:25px;
 right:25px;
 background:#25D366;
 color:white;
-width:60px;
-height:60px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
 font-size:28px;
+padding:15px 18px;
+border-radius:50%;
 text-decoration:none;
+box-shadow:0 5px 10px rgba(0,0,0,0.3);
 }
 
 </style>
-
 </head>
 
 <body>
@@ -101,165 +99,168 @@ text-decoration:none;
 
 <h1>BPM MANAGEMENT</h1>
 
-<p>Certificación Manipulación de Alimentos</p>
+<p>Asesorías y Consultorías en Inocuidad Alimentaria y Sistemas de Gestión</p>
+
+<a class="btn" href="https://wa.me/573228129237" target="_blank">
+Solicitar Asesoría
+</a>
 
 </header>
 
-<div class="container">
+<section>
+
+<h2>Nuestros Servicios</h2>
+
+<div class="servicios">
 
 <div class="card">
-
-<h2>Registro de Estudiante</h2>
-
-<input id="nombre" placeholder="Nombre completo">
-
-<input id="cedula" placeholder="Cédula">
-
-<input id="email" placeholder="Correo electrónico">
-
-<input id="telefono" placeholder="Teléfono">
-
-<button onclick="registrar()">Continuar</button>
-
+<h3>Plan de Saneamiento Básico</h3>
+<p>Diseñamos e implementamos programas que garantizan la inocuidad en los procesos alimentarios.</p>
 </div>
 
 <div class="card">
-
-<h2>Video Capacitación</h2>
-
-<iframe src="https://www.youtube.com/embed/1lq5lVg2jS0" allowfullscreen></iframe>
-
+<h3>Implementación BPM</h3>
+<p>Implementación de Buenas Prácticas de Manufactura y sistemas de gestión de calidad.</p>
 </div>
 
 <div class="card">
-
-<h2>Evaluación BPM</h2>
-
-<form id="quiz">
-
-<div class="question">
-
-1. ¿Qué significa BPM?<br>
-
-<input type="radio" name="q1"> Buen proceso mejorado<br>
-<input type="radio" name="q1" value="correct"> Buenas prácticas de manufactura<br>
-
+<h3>Consultoría Alimentaria</h3>
+<p>Asesoría especializada para empresas del sector alimentos.</p>
 </div>
 
-<div class="question">
-
-2. Los microorganismos están presentes en el ambiente.<br>
-
-<input type="radio" name="q2" value="correct"> Verdadero<br>
-<input type="radio" name="q2"> Falso<br>
-
+<div class="card">
+<h3>Trámites INVIMA</h3>
+<p>Gestión de registros sanitarios, permisos y requisitos regulatorios.</p>
 </div>
 
-<div class="question">
-
-3. Todos los microorganismos son perjudiciales.<br>
-
-<input type="radio" name="q3"> Verdadero<br>
-<input type="radio" name="q3" value="correct"> Falso<br>
-
+<div class="card">
+<h3>Capacitación Manipulación de Alimentos</h3>
+<p>Cursos certificados y programas de capacitación continua.</p>
 </div>
 
-<div class="question">
-
-4. La higiene personal es importante.<br>
-
-<input type="radio" name="q4" value="correct"> Verdadero<br>
-<input type="radio" name="q4"> Falso<br>
-
+<div class="card">
+<h3>Desarrollo de Productos</h3>
+<p>Estandarización y formulación de nuevos productos alimentarios.</p>
 </div>
 
-<div class="question">
-
-5. ¿Qué es inocuidad?<br>
-
-<input type="radio" name="q5"> Alimento contaminado<br>
-<input type="radio" name="q5" value="correct"> Alimento seguro<br>
-
+<div class="card">
+<h3>Diseño de Plantas</h3>
+<p>Estructuración de plantas de producción cumpliendo normativa sanitaria.</p>
 </div>
 
-<button type="button" onclick="evaluar()">Enviar Evaluación</button>
-
-</form>
-
-<p id="resultado"></p>
-
-</div>
-
-<div class="card" id="pago">
-
-<h2>Pago del Carné</h2>
-
-<p>Realiza el pago por Nequi:</p>
-
-<h3>3228129237</h3>
-
-<button onclick="window.open('https://wa.me/573228129237')">
-
-Enviar comprobante
-
-</button>
-
+<div class="card">
+<h3>Mantenimiento Sistema de Calidad</h3>
+<p>Seguimiento y mejora continua de los sistemas de gestión.</p>
 </div>
 
 </div>
 
-<a class="whatsapp" href="https://wa.me/573228129237">
+</section>
 
-💬
 
+<section>
+
+<h2>Auditorías BPM y HACCP</h2>
+
+<p>
+Evaluamos su sistema de gestión de calidad mediante auditorías internas
+adaptadas a los objetivos y necesidades de cada empresa.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>Programas de Saneamiento</h2>
+
+<div class="servicios">
+
+<div class="card">
+<h3>Limpieza y Desinfección</h3>
+<p>Protocolos para áreas, equipos, utensilios y manipuladores.</p>
+</div>
+
+<div class="card">
+<h3>Control de Plagas</h3>
+<p>Medidas preventivas para evitar infestaciones.</p>
+</div>
+
+<div class="card">
+<h3>Gestión de Residuos</h3>
+<p>Programas para el manejo adecuado de desechos sólidos.</p>
+</div>
+
+<div class="card">
+<h3>Calidad del Agua</h3>
+<p>Control y verificación de la calidad del agua utilizada.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2>Servicios Complementarios</h2>
+
+<div class="servicios">
+
+<div class="card">
+<h3>Análisis de Laboratorio</h3>
+<p>Microbiológicos, fisicoquímicos y metrológicos.</p>
+</div>
+
+<div class="card">
+<h3>Productos de Limpieza</h3>
+<p>Detergentes, desengrasantes y desinfectantes industriales.</p>
+</div>
+
+<div class="card">
+<h3>SGSST</h3>
+<p>Diagnóstico e implementación del Sistema de Seguridad y Salud en el Trabajo.</p>
+</div>
+
+<div class="card">
+<h3>Exámenes Ocupacionales</h3>
+<p>Servicios médicos ocupacionales con aliados estratégicos.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section style="background:#0a4c8a;color:white;text-align:center">
+
+<h2>Contáctanos</h2>
+
+<p>Recibe asesoría personalizada para tu empresa.</p>
+
+<a class="btn" href="https://wa.me/573228129237" target="_blank">
+Hablar por WhatsApp
 </a>
 
-<script>
+</section>
 
-function registrar(){
 
-let datos = {
+<div class="footer">
 
-nombre:document.getElementById("nombre").value,
-cedula:document.getElementById("cedula").value,
-email:document.getElementById("email").value,
-telefono:document.getElementById("telefono").value,
-resultado:"Pendiente"
+<p>BPM Asesorías y Consultorías</p>
 
-}
+<p>Email: bpmasesoriasyconsultorias@gmail.com</p>
 
-fetch("AQUI_TU_LINK_GOOGLE_SCRIPT",{
+<p>Instagram: @BPMMANAGEMENT</p>
 
-method:"POST",
-body:JSON.stringify(datos)
+<p>Facebook: @BpmAsesoriasyConsultorias</p>
 
-})
+</div>
 
-alert("Registro guardado")
 
-}
-
-function evaluar(){
-
-let correctas=document.querySelectorAll('input[value="correct"]:checked').length
-
-if(correctas>=3){
-
-document.getElementById("resultado").innerHTML="Aprobaste el examen"
-
-document.getElementById("pago").style.display="block"
-
-}
-
-else{
-
-document.getElementById("resultado").innerHTML="No aprobaste"
-
-}
-
-}
-
-</script>
+<a class="whatsapp" href="https://wa.me/573228129237" target="_blank">
+💬
+</a>
 
 </body>
 </html>
