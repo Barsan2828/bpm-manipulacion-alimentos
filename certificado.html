@@ -5,23 +5,40 @@
 
 <title>Certificado BPM</title>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
 <style>
 
 body{
 text-align:center;
 font-family:Arial;
+background:#f4f6f9;
 }
 
 .certificado{
-border:5px solid #0e6cc4;
-padding:50px;
-margin:50px;
+width:900px;
+margin:auto;
+border:6px solid #0e6cc4;
+padding:60px;
+background:white;
 }
 
 .nombre{
-font-size:32px;
+font-size:36px;
 font-weight:bold;
 color:#0e6cc4;
+margin:20px;
+}
+
+button{
+margin-top:30px;
+padding:14px 40px;
+border:none;
+background:#25D366;
+color:white;
+font-size:18px;
+border-radius:30px;
+cursor:pointer;
 }
 
 </style>
@@ -30,7 +47,7 @@ color:#0e6cc4;
 
 <body>
 
-<div class="certificado">
+<div id="certificado" class="certificado">
 
 <h1>CERTIFICADO</h1>
 
@@ -38,18 +55,41 @@ color:#0e6cc4;
 
 <div class="nombre" id="nombre"></div>
 
-<p>Ha aprobado el curso de</p>
+<p>Ha aprobado satisfactoriamente el curso de</p>
 
 <h2>Manipulación de Alimentos</h2>
 
-<p>BPM MANAGEMENT</p>
+<p>Otorgado por</p>
+
+<h3>BPM MANAGEMENT</h3>
 
 </div>
 
+<button onclick="descargar()">
+Descargar Certificado
+</button>
+
 <script>
 
-document.getElementById("nombre").innerHTML =
-localStorage.getItem("estudiante")
+let nombre = localStorage.getItem("estudiante")
+
+document.getElementById("nombre").innerHTML = nombre
+
+function descargar(){
+
+html2canvas(document.querySelector("#certificado")).then(canvas => {
+
+let link = document.createElement("a")
+
+link.download = "certificado_bpm.png"
+
+link.href = canvas.toDataURL()
+
+link.click()
+
+})
+
+}
 
 </script>
 
